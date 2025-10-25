@@ -10,10 +10,10 @@ Entity multiplicador_016 is
 	);
 end multiplicador_016;
 
---MULTIPLICADOR 1/6
+--Multplier: Output = 1/6 * X
 
 Architecture simple of multiplicador_016 is 
-	 --1. Creacion de las señales 
+	 --1. Creacion de las seÃ±ales 
 	-- Signal x_i: signed (27 downto 0);
 	Signal  w1, w4, w5, w40, w41, w41984, w41943: signed (49 downto 0);
 
@@ -42,8 +42,9 @@ begin
 			output<=(others=>'0');
 		elsif (CLK'event  and CLK='1') then
 			output<=std_logic_vector(w41943(49 downto 18));  -- Seleccionamos los bits de salida de acuerdo al 
-															   -- formato utilizado (en este caso 12.20). Se realiza la conversión 
+															   -- formato utilizado (en este caso 12.20). Se realiza la conversiÃ³n 
 															   -- de signed a std_logic_vector
 		end if;	
 	end process;
+
 end simple;
