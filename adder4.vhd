@@ -2,7 +2,7 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity adder4 is		 		 --Listo para RK4 S=A+2B+2C+D
+entity adder4 is		 		 --Ready for RungeKutta4 S=A+2B+2C+D
 	port (	
 	CLK,RST:in std_logic;
 	A,B,C,D	: 	in std_logic_vector(31 downto 0);
@@ -28,5 +28,6 @@ begin
 			S<=std_logic_vector(signed(A)+signed (w67108864b(49 downto 18))+signed (w67108864c(49 downto 18))+signed(D));
 		end if;
 	end process;
+
 
 end arch;
