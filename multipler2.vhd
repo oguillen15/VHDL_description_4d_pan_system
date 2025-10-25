@@ -29,7 +29,8 @@ begin
 			out1<=(others =>'0');
 		elsif (rising_edge(clk)) then
 			aux <= signed(a)*signed(b);
-			out1 <= std_logic_vector(aux(49 downto 18));
+			out1 <= std_logic_vector(aux(49 downto 18)); -- The truncation depends on format (1.13.18)
 		end if;
 	end process;
+
 end arch;
