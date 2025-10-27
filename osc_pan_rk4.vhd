@@ -198,15 +198,15 @@ U115:entity work.multiplicador_016(simple)					port map(clk,rst,sum4x_mul016x,mu
 U116:entity work.adder2(arch)				generic map(n) 	port map(clk,rst,xi,mul016x_sum4,x);
 
 U117:entity work.adder4(arch)								port map(clk,rst,ky1,ky2,ky3,ky4,sum4y_mul016y);
-U118:entity work.multiplicador_016(simple)					port map(clk,rst,sum4y_mul016y,mul016y_sum5);
+U118:entity work.scm1_016(simple)					port map(clk,rst,sum4y_mul016y,mul016y_sum5);
 U119:entity work.adder2(arch)				generic map(n) 	port map(clk,rst,yi,mul016y_sum5,y);
 
 U120:entity work.adder4(arch)								port map(clk,rst,kz1,kz2,kz3,kz4,sum4z_mul016z);
-U121:entity work.multiplicador_016(simple)					port map(clk,rst,sum4z_mul016z,mul016z_sum6);
+U121:entity work.scm1_016(simple)					port map(clk,rst,sum4z_mul016z,mul016z_sum6);
 U122:entity work.adder2(arch)				generic map(n) 	port map(clk,rst,zi,mul016z_sum6,z);	 
 
 U123:entity work.adder4(arch)								port map(clk,rst,kw1,kw2,kw3,kw4,sum4w_mul016w);
-U124:entity work.multiplicador_016(simple)					port map(clk,rst,sum4w_mul016w,mul016w_sum7);
+U124:entity work.scm1_016(simple)					port map(clk,rst,sum4w_mul016w,mul016w_sum7);
 U125:entity work.adder2(arch)				generic map(n) 	port map(clk,rst,wi,mul016w_sum7,w);	
 	
 	
@@ -221,4 +221,5 @@ xf <= xi;
 yf <= yi;
 zf <= zi;
 wf <= wi;
+
 end oscillator;
